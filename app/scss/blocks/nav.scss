@@ -1,0 +1,119 @@
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 30px;
+    gap: 4px;
+  }
+}
+
+.nav__toggle {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  right: 16px;
+  top: 12px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 28px 28px;
+  border: none;
+  z-index: 999;
+  border: none;
+  cursor: pointer;
+
+  @media screen and (min-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+
+.nav--closed .nav__toggle::before {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  right: 0;
+  top: 0;
+  background-image: url("../images/src/icons/menu.svg");
+  background-size: 28px 28px;
+  content: "";
+}
+
+
+.nav--opened .nav__toggle::before {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  right: 0;
+  top: 0;
+  background-image: url("../images/src/icons/close.svg");
+  background-size: 28px 28px;
+  content: "";
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .nav--closed .nav__wrapper {
+    display: none;
+  }
+
+  .nav--opened .nav__wrapper {
+    position: fixed;
+    top: 66px;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: $primaryBg;
+    width: 100%;
+    z-index: 9999;
+    transition: 1s ease-in-out;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .nav--opened .nav__lang {
+    display: none;
+  }
+
+  .nav--opened .nav__user .user__link {
+    min-width: 300px;
+    padding: 13px 20px 10px;
+  }
+}
+
+.nav__link {
+  font-family: "Lexend", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $fontColor;
+  padding: 8px;
+
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+    border-radius: 28px;
+    border: 2px solid $accent;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 13px 20px 10px;
+  }
+}

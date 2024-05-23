@@ -1,0 +1,91 @@
+.blog {
+  padding: 140px 0 130px;
+
+  @media screen and (max-width: $desktop) {
+    padding: 0 0 114px;
+  }
+}
+
+.blog__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+}
+
+.blog__container {
+  background-color: $bgBlog;
+  border-radius: 100px;
+  border: 3px solid $accent;
+  padding-right: 16px;
+
+  @media screen and (max-width: $tablet) {
+    border-radius: 50px;
+    border: 2px solid $accent;
+    padding-right: 6px;
+  }
+}
+
+.blog__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-radius: 100px;
+  height: 595px;
+  padding: 24px 16px 36px 24px;
+  overflow: auto;
+  scrollbar-width: 8px;
+  scrollbar-color: $accent $bgBlog;
+
+  @media screen and (max-width: $tablet) {
+    border-radius: 50px;
+    gap: 12px;
+    height: 420px;
+    padding: 10px 6px 10px 10px;
+    scrollbar-width: 4px;
+  }
+}
+
+.blog__item {
+  border-radius: 196px;
+  background-color: $secondaryBg;
+  padding: 16px 64px;
+
+  @media screen and (max-width: $tablet) {
+    padding: 12px 32px;
+    border-radius: 40px;
+  }
+
+  &--current {
+    background-color: $accent;
+  }
+}
+
+.blog__description {
+  max-width: 333px;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 14px;
+  color: $fontColor;
+
+  @media screen and (max-width: $mobile) {
+    line-height: 20px;
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+}
+
+.blog__time {
+  font-size: 14px;
+  line-height: 16px;
+  color: $fontText;
+  font-feature-settings: 'liga' off;
+}

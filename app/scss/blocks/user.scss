@@ -1,0 +1,37 @@
+.user {
+  display: flex;
+  gap: 14px;
+
+  @media screen and (max-width: $tablet) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 0;
+  }
+}
+
+.user__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  font-family: "Lexend", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  border-radius: 24px;
+  cursor: pointer;
+  color: $fontColor;
+  text-transform: uppercase;
+
+  &--log {
+    background-color: $accent;
+    border: none;
+  }
+
+  &--sign {
+    background-color: transparent;
+    border: 2px solid $accent;
+  }
+}

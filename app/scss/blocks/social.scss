@@ -1,0 +1,151 @@
+.social {
+  display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-wrap: wrap;
+
+  @media screen and (max-width: $tablet) {
+    gap: 8px;
+  }
+}
+
+.social__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  align-self: flex-end;
+
+  @media screen and (max-width: $desktop) {
+    font-size: 14px;
+    align-self: flex-start;
+  }
+}
+
+.social__list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.social__link {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: url("../images/sprite.svg/bg-social") no-repeat cover /32px 32px;
+
+  &--twitter {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url("../images/src/icons/twitter.svg") no-repeat center /16px 16px;
+      content: "";
+    }
+  }
+
+  &--instagram {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url("../images/src/icons/instagram.svg") no-repeat center/ 16px 16px;
+      content: "";
+    }
+  }
+
+  &--facebook {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url("../images/src/icons/facebook.svg") no-repeat center/ 16px 16px;
+      content: "";
+    }
+  }
+
+  &--linkedin {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url("../images/src/icons/linkedIn.svg") no-repeat center/ 16px 16px;
+      content: "";
+    }
+  }
+
+  &--youtube {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url("../images/src/icons/youTube.svg") no-repeat center/ 16px 16px;
+      content: "";
+    }
+  }
+
+  &--telegram  {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url("../images/src/icons/telegram.svg") no-repeat center/ 16px 16px;
+      content: "";
+    }
+  }
+
+  &--tiktok {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url("../images/src/icons/tikTok.svg") no-repeat center/ 16px 16px;
+      content: "";
+    }
+  }
+
+  &--vkontakte {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url("../images/src/icons/vk.svg") no-repeat center/ 16px 16px;
+      content: "";
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 27px;
+    height: 27px;
+  }
+
+  &:hover,
+  &:active {
+    background-image: url("../images/src/icons/bg-social-hover.svg") ;
+  }
+}
