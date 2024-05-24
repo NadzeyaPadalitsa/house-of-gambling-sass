@@ -7,6 +7,7 @@
   <title>House of gambling</title>
   <link rel="stylesheet" href="css/style.min.css" media="all">
   <script src="js/header.js" defer></script>
+  <script src="js/lang.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -18,7 +19,7 @@
           <button class="nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
-          <div class="nav__wrapper">
+          <div class="nav__container">
             <ul class="nav__list">
               <li class="nav__item">
                 <a href="#" class="nav__link">About us</a>
@@ -39,28 +40,27 @@
                 <a href="#" class="nav__link">Careers</a>
               </li>
             </ul>
-            <ul class="nav__lang lang">
-              <li class="lang__item">
-                <a href="#" class="lang__link">
-                  <img />
-                  <span>En</span>
-                </a>
-              </li>
-              <li class="lang__item">
-                <a href="#" class="lang__link">
-                  <img />
-                  <span>Ru</span>
-                </a>
-              </li>
-            </ul>
-            <ul class="nav__user user">
-              <li class="user__item">
-                <a href="#" class="user__link user__link--log">Log in</a>
-              </li>
-              <li class="user__item">
-                <a href="#" class="user__link user__link--sign">Sign up</a>
-              </li>
-            </ul>
+            <div class="nav__wrapper">
+              <div class="nav__lang lang lang--closed">
+                <button class="lang__button">En</button>
+                <ul class="lang__list">
+                  <li class="lang__item">
+                    <a href="#" class="lang__link">En</a>
+                  </li>
+                  <li class="lang__item">
+                    <a href="#" class="lang__link">Ru</a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="nav__user user">
+                <li class="user__item">
+                  <a href="#" class="user__link user__link--log">Log in</a>
+                </li>
+                <li class="user__item">
+                  <a href="#" class="user__link user__link--sign">Sign up</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>

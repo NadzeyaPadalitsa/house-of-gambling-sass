@@ -1,6 +1,10 @@
-.nav__wrapper {
+.nav__container {
   display: flex;
-  justify-content: space-between;
+  gap: 190px;
+
+@media screen and (max-width: $desktop) {
+    gap: 10px;
+  }
 
   @media screen and (max-width: $tablet) {
     flex-direction: column;
@@ -56,8 +60,8 @@
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 16px;
   flex-wrap: wrap;
+
 
   @media screen and (max-width: $tablet) {
     flex-direction: column;
@@ -67,11 +71,11 @@
 }
 
 @media screen and (max-width: $tablet) {
-  .nav--closed .nav__wrapper {
+  .nav--closed .nav__container {
     display: none;
   }
 
-  .nav--opened .nav__wrapper {
+  .nav--opened .nav__container {
     position: fixed;
     top: 66px;
     bottom: 0;
@@ -88,6 +92,10 @@
 }
 
 @media screen and (max-width: $tablet) {
+  .nav--closed .nav__lang {
+    display: block;
+  }
+
   .nav--opened .nav__lang {
     display: none;
   }
@@ -116,4 +124,12 @@
     line-height: 24px;
     padding: 13px 20px 10px;
   }
+}
+
+.nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0;
 }

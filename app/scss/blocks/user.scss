@@ -1,5 +1,7 @@
 .user {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 14px;
 
   @media screen and (max-width: $tablet) {
@@ -26,11 +28,13 @@
   text-transform: uppercase;
 
   &--log {
+    min-width: 88px;
     background-color: $accent;
     border: none;
   }
 
   &--sign {
+    min-width: 98px;
     background-color: transparent;
     border: 2px solid $accent;
   }

@@ -33,7 +33,7 @@
   width: 32px;
   height: 32px;
   cursor: pointer;
-  background: url("../images/sprite.svg/bg-social") no-repeat cover /32px 32px;
+  background: url("../images/src/icons/bg-social.svg") no-repeat center /32px 32px;
 
   &--twitter {
     &::before {
@@ -140,8 +140,9 @@
   }
 
   @media screen and (max-width: $mobile) {
-    width: 27px;
-    height: 27px;
+    width: 28px;
+    height: 28px;
+    background: url("../images/src/icons/bg-social.svg") no-repeat center /28px 28px;
   }
 
   &:hover,

@@ -13,9 +13,15 @@
 .header__container {
   display: flex;
   justify-content: space-between;
+  gap: 190px;
   border-radius: 64px;
   border: 4px solid $accent;
   padding: 18px 48px;
+
+  @media screen and (max-width: $desktop) {
+    justify-content: space-between;
+    gap: 10px;
+  }
 
   @media screen and (max-width: $tablet) {
     position: relative;
@@ -27,5 +33,10 @@
 
 .header__logo {
   display: block;
-  width: 287px;
+  width: 288px;
+
+  @media screen and (max-width: $tablet) {
+    width: 55px;
+  }
 }
+
