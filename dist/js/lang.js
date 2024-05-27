@@ -1,6 +1,21 @@
-let lang=document.querySelector(".lang"),
-langButton=document.querySelector(".lang__button");
-langButton.addEventListener("click",(function(){lang.classList.contains("lang--closed")?(lang.classList.remove("lang--closed"),
-lang.classList.add("lang--opened")):(lang.classList.add("lang--closed"),
-lang.classList.remove("lang--opened"))}));
+const select = document.querySelector('select');
 
+select.addEventListener('change', changeURLLang);
+const allLangs = ['en', 'ru'];
+
+function changeURLLang() {
+  let lang = select.value;
+  location.href = window.location.pathname + '#' + lang;
+  location.reload();
+};
+
+function changeLang() {
+  let hash = window.location.hash;
+  hash = hash.substring(1);
+  if (!allLangs.includes(hash)) {
+    location.href = window.location.pathname + '#en';
+    location.reload();
+  }
+  select.value = hash;
+}
+changeLang();

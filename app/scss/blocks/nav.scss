@@ -9,7 +9,6 @@
   @media screen and (max-width: $tablet) {
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 30px;
     gap: 4px;
   }
 }
@@ -71,13 +70,17 @@
 }
 
 @media screen and (max-width: $tablet) {
-  .nav--closed .nav__container {
+  .nav--closed .nav__list {
+    display: none;
+  }
+
+  .nav--closed .nav__wrapper .nav__user {
     display: none;
   }
 
   .nav--opened .nav__container {
     position: fixed;
-    top: 66px;
+    top: 96px;
     bottom: 0;
     right: 0;
     display: flex;
@@ -87,17 +90,17 @@
     background-color: $primaryBg;
     width: 100%;
     z-index: 9999;
-    transition: 1s ease-in-out;
   }
 }
 
 @media screen and (max-width: $tablet) {
-  .nav--closed .nav__lang {
-    display: block;
+
+  .nav--opened .nav__wrapper .nav__lang {
+    display: none;
   }
 
-  .nav--opened .nav__lang {
-    display: none;
+  .nav--closed .nav__wrapper .nav__lang {
+    display: block;
   }
 
   .nav--opened .nav__user .user__link {
